@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About page</title>
+  <link rel="stylesheet" href="about.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+
+  <div class="nav">
+    <img src="/images/logo putih2.png" class="nav-logo">
+    <div class="container">
+      <a class="btn" href="/index.html">Home</a>
+      <a class="btn" href="#project">Project</a>
+      <a class="btn" href="#contact">Contact</a>
+
+    </div>
+  </div>
+
+
+    <div class="about-page" id="about">
+      <div class="text">
+        <h1>Hi I'm Fardan Bakhtiyar</h1>
+        <br>
+        <h3>
+          Perkenalkan nama saya Muhammad Fardan Bakhtiyar asal Cikarang Selatan, saya kelahiran tahun 2009. Saya
+          sekolah
+          di Sekolah Developer Indonesia (KODEIN), saya masih duduk di bangku SMA lebih tepatnya berada kelas 10
+          SMA dan
+          saya masih mengenal atau belajar dasar dasar dari design dan programming. Perkenalkan nama saya Muhammad
+          Fardan Bakhtiyar asal Cikarang Selatan, saya kelahiran tahun 2009. Saya sekolah
+          di Sekolah Developer Indonesia (KODEIN), saya masih duduk di bangku SMA lebih tepatnya berada kelas 10
+          SMA dan
+          saya masih mengenal atau belajar dasar dasar dari design dan programming.
+        </h3>
+      </div>
+    </div>
+        <div class="skill-text">
+        <h1> What I'm currently learning</h1>
+      </div>
+    <div class="skill-page">
+  
+      <div class="skill">
+        <div class="skill-content">
+          <i class="fa-brands fa-figma"></i>
+          <i class="fa-brands fa-html5"></i>
+          <i class="fa-brands fa-css3-alt"></i>
+          <i class="fa-brands fa-js"></i>
+          <i class="fa-brands fa-react"></i>
+
+          <i class="fa-brands fa-figma"></i>
+          <i class="fa-brands fa-html5"></i>
+          <i class="fa-brands fa-css3-alt"></i>
+          <i class="fa-brands fa-js"></i>
+          <i class="fa-brands fa-react"></i>
+
+          <i class="fa-brands fa-figma"></i>
+          <i class="fa-brands fa-html5"></i>
+          <i class="fa-brands fa-css3-alt"></i>
+          <i class="fa-brands fa-js"></i>
+          <i class="fa-brands fa-react"></i>
+
+          <i class="fa-brands fa-figma"></i>
+          <i class="fa-brands fa-html5"></i>
+          <i class="fa-brands fa-css3-alt"></i>
+          <i class="fa-brands fa-js"></i>
+          <i class="fa-brands fa-react"></i>
+        </div>
+      </div>
+    </div>
+    <script>
+      let lastScroll = 0;
+      const navbar = document.querySelector(".nav");
+
+      window.addEventListener("scroll", function () {
+        let currentScroll = window.pageYOffset;
+
+        if (currentScroll > lastScroll) {
+          navbar.style.top = "-100px"; // hilang
+        } else {
+          navbar.style.top = "30px";   // muncul
+        }
+
+        lastScroll = currentScroll;
+      });
+    </script>
+
+</body>
+
+</html>

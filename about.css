@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F5E6D3;
+    color: #222222;
+}
+.nav {
+  font-family: sans-serif;
+  background-color: black;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 60px;
+  border-radius: 40px;
+  z-index: 2;
+  top: 30px;
+  transition: top 0.4s ease;
+}
+
+.nav-logo {
+  display: flex;
+  justify-content: left;
+  margin-top: -5px;
+  margin-left: 10px;
+  width: 70px;
+}
+
+.container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 40px;
+  margin-right: 41px;
+  margin-top: -70px;
+}
+
+.btn {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background-color: white;
+  color: black;
+  transform: translateY(-3px);
+}
+
+
+.about-page {
+    font-family: sans-serif;
+    text-align: left;
+    height: 450px;
+    width: 900px;
+    display: flex;
+    justify-content: center;
+    margin-left: 180px;
+    margin-top: 150px;
+    background-color: #f5f1ea;
+    border: solid;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h3 {
+    font-weight: 100;
+}
+.skill-text{
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    font-family: sans-serif;
+    margin-top: 250px;
+}
+
+.skill-page {
+    font-size: 80px;
+    margin-top: 135px;
+    overflow: hidden;
+    width: 100%;
+    background: #d6c6b2;
+    padding: 40px 0;
+}
+
+.skill {
+    display: flex;
+    width: fit-content;
+    animation: scroll 20s linear infinite;
+    will-change: transform;
+}
+
+.skill-content {
+    display: flex;
+    gap: 80px;
+    padding-right: 80px;
+}
+
+.skill-content i {
+    font-size: 60px;
+    color: #222;
+}
+
+.skill-page:has(.skill-content i:hover) .skill {
+    animation-play-state: paused;
+}
+
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}

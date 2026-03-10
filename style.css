@@ -1,0 +1,510 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F5E6D3;
+  color: #222222;
+}
+
+.mouse-btn {
+  margin: 10px auto;
+  width: 40px;
+  height: 80px;
+  border: 3px solid rgba(122, 122, 124, 0.918);
+  border-radius: 20px;
+  display: flex;
+}
+
+.mouse-scroll {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(170deg, rgba(122, 122, 124, 0.918), rgb(123, 124, 124));
+  border-radius: 50%;
+  margin: auto;
+  animation: scrolling13 1s linear infinite;
+}
+
+@keyframes scrolling13 {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(20px);
+  }
+}
+
+.outline {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+
+
+.nav {
+  font-family: sans-serif;
+  background-color: black;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 60px;
+  border-radius: 40px;
+  z-index: 2;
+  top: 30px;
+  transition: top 0.4s ease;
+}
+
+.nav-logo {
+  display: flex;
+  justify-content: left;
+  margin-top: -5px;
+  margin-left: 10px;
+  width: 70px;
+}
+
+.container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1px;
+  margin-right: 20px;
+  margin-top: -70px;
+}
+
+.btn {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background-color: white;
+  color: black;
+  transform: translateY(-3px);
+}
+
+
+
+
+.menu {
+  display: flex;
+  padding: 10px 25px;
+  border-radius: 20px;
+
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+/* From Uiverse.io by alexmaracinaru */
+.cta {
+  position: relative;
+  margin: auto;
+  padding: 12px 18px;
+  transition: all 0.2s ease;
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-left: 2px;
+  margin-top: 35px;
+
+}
+
+.cta:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 50px;
+  background: #FD802E;
+  width: 45px;
+  height: 45px;
+  transition: all 0.3s ease;
+}
+
+.cta span {
+  position: relative;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: black;
+}
+
+.cta svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: black;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+
+.cta:hover:before {
+  width: 100%;
+  background: orange;
+}
+
+.cta:hover svg {
+  transform: translateX(0);
+}
+
+.cta:active {
+  transform: scale(0.95);
+}
+
+.img1 {
+  width: 300px;
+  margin-left: 90px;
+  margin-top: 150px;
+}
+
+.main1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  background-color: #f5f1ea;
+  height: 639px;
+  font-size: 30px;
+  border: solid;
+  z-index: 1;
+
+
+}
+
+.main2 {
+  display: flex;
+  flex-direction: row;
+  background-color: #f5f1ea;
+  height: 500px;
+  width: 950px;
+  margin-bottom: 20px;
+  margin-left: 153px;
+  margin-top: 350px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border: solid;
+  position: sticky;
+  top: 70px;
+  z-index: -1;
+
+
+}
+
+.main3 {
+  display: flex;
+  flex-direction: row;
+  background-color: #f5f1ea;
+  height: 600px;
+  width: 1000px;
+  margin-left: 125px;
+  margin-top: 350px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border: solid;
+  top: 15px;
+
+}
+
+
+
+.hero1 {
+  display: flex;
+  flex-direction: column;
+  margin-left: 150px;
+  margin-top: 150px;
+  font-family: sans-serif;
+  z-index: 1;
+
+
+}
+
+.hello {
+  font-size: 50px;
+}
+
+.fardan {
+  font-size: 100px;
+}
+
+.full-stack {
+  font-size: 20px;
+}
+
+
+.build {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: -1;
+
+}
+
+.p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  font-size: 50px;
+  font-weight: 100;
+
+}
+
+
+
+.text {
+  font-family: sans-serif;
+  margin-top: 50px;
+  margin-left: 40px;
+  font-size: 20px;
+
+}
+
+
+.main4 {
+  background-color: #F5E6D3;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background: #f5f1ea;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  margin-top: 40px;
+
+
+}
+
+.card svg {
+  width: 200px;
+  fill: #333;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+.card-profile{
+  height: 200px;
+}
+
+.card:hover {
+  transform: rotate(-5deg) scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  opacity: 0;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.card:hover .card__content {
+  transform: translate(-50%, -50%) rotate(0deg);
+  opacity: 1;
+}
+
+.card__title {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
+}
+
+.card__description {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #777;
+  line-height: 1.4;
+}
+
+.card:hover svg {
+  scale: 0;
+  transform: rotate(-45deg);
+}
+.text-1{
+    margin-top: 50px;
+    font-size: 50px;
+    text-align: center;
+}
+
+.btn-outline {
+  background-color: #f5f1ea;
+  color: black;
+}
+.card:hover svg {
+  scale: 0;
+  transform: rotate(-45deg);
+}
+.container-1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-color: #f5f1ea;
+    height: 300px;
+    width: 1060px;
+    margin-top: 50px;
+}
+.container-2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-color: #f5f1ea;
+    height: 300px;
+    width: 1060px;
+    margin-top: 50px;
+    margin-left: 195px;
+}
+.container-3{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-color: #f5f1ea;
+    height: 300px;
+    width: 1060px;
+    margin-top: 50px;
+}
+
+.contact{
+  margin-top: 100px;
+  background-color: #F5E6D3;
+
+}
+
+.text-contact{
+  margin-left: 40px;
+  font-family: sans-serif;
+  font-size: 20px;
+}
+
+.container-contact {
+  background-color: #FD802E;
+  height: 400px;
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-left: -150px;
+
+}
+.wa-dis{
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.git-ig{
+  display: flex;
+  flex-direction: column;
+}
+
+.icon {
+  display: inline-flex;
+  width: 60px;
+  height: 60px;
+  text-decoration: none;
+  font-size: 25px;
+  outline: 2px solid black;
+  border-radius: 50%;
+  transition-property: outline-offset, outline-color, background-color;
+  transition-duration: 0.25s;
+  color: black;
+}
+
+.icon:hover {
+  outline-offset: 4px;
+}
+
+.icon svg {
+  margin: auto;
+  width: 31px;
+}
+
+.icon-instagram:hover {
+  background-color: greenyellow;
+  outline-color: greenyellow;
+}
+
+.icon-dis:hover {
+  background-color: rgb(76, 0, 255);
+  outline-color: rgb(76, 0, 255);
+}
+
+.icon-github:hover {
+  background-color: #555555;
+  outline-color: #555555;
+}
+
+.icon-in:hover {
+  background-color: plum;
+  outline-color: plum;
+}
+
+.icon:hover svg {
+  animation: shake 0.25s;
+}
+
+@keyframes shake {
+  10% {
+    transform: rotate(15deg);
+  }
+  20% {
+    transform: rotate(-15deg);
+  }
+}
