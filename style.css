@@ -9,6 +9,7 @@ html {
 }
 
 body {
+  font-family: sans-serif;
   background-color: #F5E6D3;
   color: #222222;
 }
@@ -296,7 +297,7 @@ a {
 
 .card-project{
   width: 100%;
-  background: white;
+  background: #f5f1ea;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   overflow: hidden;
