@@ -200,7 +200,7 @@ a {
 }
 
 
-.main3 {
+.main2 {
   display: flex;
   flex-direction: row;
   background-color: #f5f1ea;
@@ -288,79 +288,63 @@ a {
   text-align: center;
 }
 
-.container-project{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.container-project {
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
-  padding: 40px;
+  width: 800px;
+  margin: auto;
+  margin-top: 50px;
 }
 
-.card-project{
-  width: 100%;
-  background: #f5f1ea;
+.card-project {
+  width: 250px;
+  background: white;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.gambar {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
 }
 
 
-.card-text{
+.card-content {
   padding: 15px;
 }
 
-.card-text h3{
-  margin-bottom: 8px;
+.card-project h3 {
+  margin: 0 0 10px;
 }
 
-.card-text p{
+.card-project p {
   font-size: 14px;
   color: #555;
 }
 
-.btn-project{
+.card-project button {
+  margin-top: 10px;
   width: 100%;
-  padding: 12px;
+  padding: 10px;
   border: none;
-  background: red;
+  background: #007bff;
   color: white;
-  font-weight: bold;
+  border-radius: 5px;
   cursor: pointer;
 }
 
-.btn-project:hover{
-  background: darkred;
-}
-.img-project{
-  margin-left: 85px;
-  margin-top: 20px;
-  height: 300px;
-}
-.button-name:focus {
-  box-shadow:
-    #d6d6e7 0 0 0 1.5px inset,
-    rgba(45, 35, 66, 0.4) 0 2px 4px,
-    rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
-    #d6d6e7 0 -3px 0 inset;
-}
-
-.button-name:hover {
-  box-shadow:
-    rgba(45, 35, 66, 0.3) 0 4px 8px,
-    rgba(45, 35, 66, 0.2) 0 7px 13px -3px,
-    #d6d6e7 0 -3px 0 inset;
-  transform: translateY(-2px);
-}
-
-.button-name:active {
-  box-shadow: #d6d6e7 0 3px 7px inset;
-  transform: translateY(2px);
+.card-project button:hover {
+  background: #0056b3;
 }
 
 
 .container-contact {
   background-color: #F5E6D3;
   height: 500px;
-    display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
 
@@ -374,25 +358,28 @@ a {
   border-top-right-radius: 20px;
   border: solid;
 }
-.contact{
+
+.contact {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-.contact-list{
+
+.contact-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px 10px;
   margin-left: 300px;
   margin-top: -130px;
 }
-.text-contact{
- font-size: 60px;
- margin-top: 20px;
- margin-left: 10px;
+
+.text-contact {
+  font-size: 60px;
+  margin-top: 20px;
+  margin-left: 10px;
 }
 
-.item{
+.item {
   display: flex;
   align-items: center;
   gap: 50px;
@@ -402,22 +389,23 @@ a {
 }
 
 
-.item .fa-discord{
+.item .fa-discord {
   font-size: 50px;
 }
 
-.item i{
+.item i {
   font-size: 60px;
-  width: 30px; /* bikin icon sejajar */
+  width: 30px;
+  /* bikin icon sejajar */
 }
 
-.item span{
+.item span {
   opacity: 0;
   transform: translateX(-8px);
   transition: 0.3s;
 }
 
-.item:hover span{
+.item:hover span {
   opacity: 1;
   transform: translateX(0);
 }
