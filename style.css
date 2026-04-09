@@ -268,7 +268,7 @@ a {
 }
 
 .fardan {
-  font-size: 100px;
+  font-size: 35px;
 }
 
 .full-stack {
@@ -460,6 +460,10 @@ a {
   transform: translateX(0);
 }
 
+.mobile-only {
+  display: none;
+}
+
 /* ============ RESPONSIVE MOBILE ============ */
 
 /* Mobile (<640px) */
@@ -575,25 +579,43 @@ a {
   }
 
   .fardan {
-    font-size: 48px;
+    font-size: 18px;
   }
 
   .full-stack {
     font-size: 16px;
   }
 
-  .mobile-only {
+  .mobile-only .about-me {
     background-color: #f5f1ea;
-    height: 400px;
+    height: 350px;
     width: 95%;
     margin-left: 10px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     border: solid;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
 
+  .about-h1 {
+    font-size: 28px;
+    margin-top: 20px;
+    text-align: center;
+  }
 
+  .about-p {
+    font-size: 14px;
+    margin: 20px;
+    text-align: start;
+  }
+
+  .mobile-only .skill-page {
+    font-size: 50px;
+    margin-top: 30px;
+    padding: 30px 0;
+    background: #d6c6b2;
   }
 
   .cta {
