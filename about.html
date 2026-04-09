@@ -13,11 +13,15 @@
 
   <div class="nav">
     <img src="/images/logo putih2.png" class="nav-logo">
-    <div class="container">
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="container" id="navMenu">
       <a class="btn" href="/index.html">Home</a>
       <a class="btn" href="#project">Project</a>
       <a class="btn" href="#contact">Contact</a>
-
     </div>
   </div>
 
@@ -73,6 +77,25 @@
       </div>
     </div>
     <script>
+      // Hamburger Menu Toggle
+      const hamburger = document.getElementById('hamburger');
+      const navMenu = document.getElementById('navMenu');
+      const navLinks = navMenu.querySelectorAll('.btn');
+
+      hamburger.addEventListener('click', function() {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+      });
+
+      // Close menu when clicking on a link
+      navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          hamburger.classList.remove('active');
+          navMenu.classList.remove('active');
+        });
+      });
+
+      // Navbar scroll hide/show
       let lastScroll = 0;
       const navbar = document.querySelector(".nav");
 

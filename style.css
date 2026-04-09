@@ -65,6 +65,10 @@ body {
   z-index: 2;
   top: 30px;
   transition: top 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
 }
 
 .nav-logo {
@@ -81,6 +85,37 @@ body {
   gap: 1px;
   margin-right: 20px;
   margin-top: -70px;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 3;
+  gap: 5px;
+  align-items: center;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background-color: white;
+  transition: 0.3s ease;
+  border-radius: 2px;
+  display: block;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(10px, 10px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(8px, -8px);
 }
 
 .btn {
@@ -251,6 +286,10 @@ a {
 
 }
 
+.t {
+  text-align: center;
+}
+
 .p {
   display: flex;
   justify-content: center;
@@ -274,7 +313,7 @@ a {
 
 .main4 {
   background-color: #F5E6D3;
-  height: 1600px;
+  height: 1100px;
   display: flex;
   flex-direction: column;
   font-family: sans-serif;
@@ -292,23 +331,34 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  width: 800px;
+  width: 1000px;
   margin: auto;
   margin-top: 50px;
 }
 
 .card-project {
-  width: 250px;
+  width: 300px;
   background: white;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-project:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
 }
 
 .gambar {
   height: 300px;
   width: 100%;
   object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-project:hover .gambar {
+  transform: scale(1.05);
 }
 
 
@@ -408,4 +458,237 @@ a {
 .item:hover span {
   opacity: 1;
   transform: translateX(0);
+}
+
+/* ============ RESPONSIVE MOBILE ============ */
+
+/* Mobile (<640px) */
+@media (max-width: 640px) {
+
+  /* Navigation */
+  .nav {
+    width: 95%;
+    height: 50px;
+    top: 15px;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .nav-logo {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+    cursor: pointer;
+  }
+
+  .hamburger span {
+    width: 26px;
+    height: 3px;
+  }
+
+  .container {
+    position: fixed;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    flex-direction: column;
+    background-color: black;
+    padding: 15px;
+    gap: 10px;
+    border-radius: 10px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    z-index: 2;
+  }
+
+  .container.active {
+    max-height: 300px;
+  }
+
+  .btn {
+    font-size: 13px;
+    padding: 10px 14px;
+    border-radius: 5px;
+    display: block;
+    text-align: center;
+  }
+
+  .btn p {
+    margin: 0;
+  }
+
+  /* Main sections */
+  .main1 {
+    height: 600px;
+    padding: 60px 20px 40px;
+    font-size: 18px;
+  }
+
+  .main1 h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .build {
+    display: none;
+  }
+
+  .mouse-btn {
+    width: 30px;
+    height: 60px;
+    border: 2px solid rgba(122, 122, 124, 0.918);
+  }
+
+  .mouse-scroll {
+    width: 15px;
+    height: 15px;
+  }
+
+  .main2 {
+    width: 95%;
+    margin: 30px auto;
+    height: auto;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+  }
+
+  .img1 {
+    width: 200px;
+    margin: 0 auto 20px;
+  }
+
+  .hero1 {
+    margin-left: 0;
+    margin-top: 0;
+    text-align: center;
+  }
+
+  .hello {
+    font-size: 28px;
+  }
+
+  .fardan {
+    font-size: 48px;
+  }
+
+  .full-stack {
+    font-size: 16px;
+  }
+
+  .mobile-only {
+    background-color: #f5f1ea;
+    height: 400px;
+    width: 95%;
+    margin-left: 10px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border: solid;
+    display: flex;
+    justify-content: center;
+
+
+  }
+
+  .cta {
+    display: none;
+
+  }
+
+  /* Projects section */
+  .main4 {
+    height: auto;
+    padding: 30px 20px;
+  }
+
+  .text-1 {
+    font-size: 32px;
+    margin-top: 20px;
+  }
+
+  .text-1 h1 {
+    font-size: 28px;
+  }
+
+  .container-project {
+    width: 100%;
+    margin: 30px auto;
+    gap: 15px;
+    flex-direction: column;
+  }
+
+  .card-project {
+    width: 100%;
+  }
+
+  .gambar {
+    height: 200px;
+  }
+
+  .card-project h3 {
+    font-size: 16px;
+  }
+
+  .card-project p {
+    font-size: 12px;
+  }
+
+  .card-project button {
+    padding: 8px;
+    font-size: 13px;
+  }
+
+  /* Contact section */
+  .container-contact {
+    height: auto;
+    padding: 30px 20px;
+  }
+
+  .content-contact {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .text-contact {
+    font-size: 32px;
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  .contact-list {
+    grid-template-columns: 1fr;
+    margin: 20px 0;
+    gap: 15px;
+  }
+
+  .item {
+    gap: 20px;
+    font-size: 14px;
+  }
+
+  .item i,
+  .item .fa-discord {
+    font-size: 32px;
+  }
+
+  .item span {
+    font-size: 14px;
+  }
+
+  .text {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 14px;
+  }
+
+  .p {
+    font-size: 24px;
+  }
 }

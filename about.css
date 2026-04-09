@@ -38,6 +38,37 @@ body {
   margin-top: -70px;
 }
 
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 3;
+  margin-right: 20px;
+  margin-top: -70px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+  transition: 0.3s;
+  border-radius: 2px;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(10px, 10px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(8px, -8px);
+}
+
 .btn {
   text-decoration: none;
   color: white;
@@ -131,5 +162,113 @@ h3 {
 
     to {
         transform: translateX(-50%);
+    }
+}
+
+/* ============ RESPONSIVE MOBILE ============ */
+
+/* Mobile (<640px) */
+@media (max-width: 640px) {
+    /* Navigation */
+    .nav {
+        width: 95%;
+        height: 50px;
+        top: 15px;
+        padding: 0 10px;
+    }
+
+    .nav-logo {
+        width: 50px;
+        margin-top: 0;
+        margin-left: 5px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .container {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background-color: black;
+        padding: 15px;
+        gap: 10px;
+        border-radius: 10px;
+        margin: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        margin-left: auto;
+        margin-right: auto;
+        width: 95%;
+    }
+
+    .container.active {
+        max-height: 300px;
+    }
+
+    .btn {
+        font-size: 13px;
+        padding: 10px 14px;
+        border-radius: 5px;
+        display: block;
+        text-align: center;
+    }
+
+    /* About page */
+    .about-page {
+        width: 95%;
+        margin: 80px auto 30px;
+        height: auto;
+        padding: 30px 20px;
+        border: solid;
+    }
+
+    .text {
+        margin: 0;
+        text-align: justify;
+    }
+
+    h1 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    h3 {
+        font-size: 13px;
+        line-height: 1.6;
+        font-weight: 400;
+    }
+
+    /* Skills section */
+    .skill-text {
+        text-align: center;
+        margin-top: 40px;
+        padding: 0 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .skill-text h1 {
+        font-size: 24px;
+    }
+
+    .skill-page {
+        font-size: 50px;
+        margin-top: 30px;
+        padding: 30px 0;
+        background: #d6c6b2;
+    }
+
+    .skill-content {
+        gap: 40px;
+        padding-right: 40px;
+    }
+
+    .skill-content i {
+        font-size: 40px;
     }
 }
